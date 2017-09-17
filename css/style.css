@@ -1,0 +1,22 @@
+body {
+  background-color: #263747;
+}
+
+.widget {
+  width: 695px;
+  height: 440px;
+  margin: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+.weather {
+  height: 108px;
+  background-color: rgba(0, 0, 0, 0.3);
+}

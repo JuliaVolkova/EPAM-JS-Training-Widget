@@ -1,3 +1,11 @@
 div {
     outline: 1px dotted green;
 }
+
+.forecast ol {
+    border: 2px solid lightseagreen;
+}
+
+.forecast li {
+    border: 1px solid red;
+}

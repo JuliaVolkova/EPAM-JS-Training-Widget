@@ -7,40 +7,45 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: #263747;
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: Lato, Helvesans, sans-serif;
     font-size: 16px;
     font-weight: 300;
     color: white;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+    background-color: #263747;
 }
 
 .visually-hidden {
     position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
     height: 1px;
     width: 1px;
     margin: -1px;
     padding: 0;
     border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
 }
 
 .widget {
     position: relative;
-    width: 695px;
-    height: 440px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    width: 695px;
+    height: 440px;
 }
 
 .widget img {
     position: absolute;
     z-index: -1;
+}
+
+.date {
+    width: 100px;
+    height: 60px;
 }
 
 .date p {
@@ -53,6 +58,11 @@ body {
     margin: 0;
     padding: 0;
     font-size: 14px;
+}
+
+.info {
+    width: 160px;
+    height: 160px;
 }
 
 .info .degrees {
@@ -78,27 +88,33 @@ body {
 }
 
 .forecast {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .forecast ol {
-    list-style: none;
     display: flex;
     justify-content: space-between;
-    /*padding: 10px;*/
+    margin: 0 15px;
+    list-style: none;
 }
 
 .forecast li {
-    width: 80px;
     display: flex;
     flex-direction: column;
+    width: 80px;
     padding: 10px;
-    font-size: 15px;
+    font-size: 14px;
+    text-align: center;
 }
 
+span.day,
+span.weather,
+span.degrees {
+    margin: 5px 0;
+}

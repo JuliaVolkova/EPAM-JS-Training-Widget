@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -30,10 +30,6 @@ body {
 
 .widget {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
     width: 695px;
     height: 440px;
 }
@@ -43,15 +39,26 @@ body {
     z-index: -1;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .date {
-    width: 100px;
-    height: 60px;
+    align-self: stretch;
+    width: auto;
+    margin: 55px 20px;
+    padding: 20px 5px;
+    text-align: center;
+    line-height: 1;
 }
 
 .date p {
     margin: 0;
     padding: 0;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 .date time {
@@ -61,23 +68,29 @@ body {
 }
 
 .info {
-    width: 160px;
-    height: 160px;
+    width: auto;
+    padding: 5px;
+    margin-right: 65px;
+    margin-top: 55px;
+    line-height: 1.1;
 }
 
 .info .degrees {
     margin: 0;
-    font-size: 84px;
+    font-size: 92px;
     font-weight: bold;
 }
 
 .info .location {
     margin: 0;
-    font-size: 22px
+    padding: 0;
+    font-size: 22px;
+    line-height: 1;
 }
 
 .info .wind {
-    margin: 0;
+    margin: 10px 40px;
+    padding: 5px;
     font-size: 28px;
     font-weight: bold;
 }
@@ -85,6 +98,17 @@ body {
 .wind .strength {
     font-size: 12px;
     font-weight: bold;
+}
+
+.wrapper-forecast {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 695px;
 }
 
 .forecast {
@@ -100,21 +124,20 @@ body {
 .forecast ol {
     display: flex;
     justify-content: space-between;
-    margin: 0 15px;
+    margin: 0 20px;
+    padding: 0;
     list-style: none;
 }
 
 .forecast li {
     display: flex;
     flex-direction: column;
-    width: 80px;
+    width: 100px;
     padding: 10px;
     font-size: 14px;
     text-align: center;
 }
 
-span.day,
-span.weather,
-span.degrees {
-    margin: 5px 0;
+.forecast span {
+    padding: 5px;
 }

@@ -132,12 +132,66 @@ body {
 .forecast li {
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: 105px;
     padding: 10px;
     font-size: 14px;
     text-align: center;
 }
 
 .forecast span {
-    padding: 5px;
+    padding: 4px 5px;
 }
+
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.forecast .weather {
+    width: 50px;
+    height: 40px;
+    margin: auto;
+    background: no-repeat center;
+}
+
+.forecast .rainy {
+    background-image: url("../img/rain.png");
+}
+
+.forecast .cloudy {
+    background-image: url("../img/cloudy.png");
+}
+
+.forecast .sunny {
+    background-image: url("../img/sunny.png");
+}
+
+.forecast .overcast {
+    background-image: url("../img/overcast.png");
+}
+
+.forecast .btn {
+    width: 15px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.forecast .btn:focus,
+.forecast .btn:hover {
+    opacity: 0.1;
+}
+
+.forecast .back {
+    background: url("../img/back.png") no-repeat center;
+}
+
+.forecast .next {
+    background: url("../img/next.png") no-repeat center;
+}
+
+
+

@@ -1,0 +1,181 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Lato, Helvesans, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+}
+
+.visually-hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.widget {
+    position: relative;
+    width: 695px;
+    height: 440px;
+}
+
+.widget img {
+    position: absolute;
+    z-index: -1;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 130px 230px;
+    grid-template-rows: 170px;
+    justify-content: end;
+}
+
+.date {
+    width: auto;
+    margin: 55px 20px;
+    padding: 20px 5px;
+    text-align: center;
+    line-height: 1;
+}
+
+.date p {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+
+.date time {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.info {
+    width: auto;
+    padding: 5px;
+    margin-right: 65px;
+    margin-top: 55px;
+    line-height: 1.1;
+}
+
+.info .degrees {
+    margin: 0;
+    font-size: 92px;
+    font-weight: bold;
+}
+
+.info .location {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.info .wind {
+    margin: 10px 40px;
+    padding: 5px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.wind .strength {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.wrapper-forecast {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 695px;
+}
+
+.forecast {
+    display: grid;
+    grid-template-columns: 100px 520px 100px;
+    grid-template-rows: 110px;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.forecast ol {
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px;
+    grid-template-rows: 110px;
+    margin: 0 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.forecast li {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.forecast span {
+    display: block;
+    padding: 3px 5px;
+}
+
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.forecast .weather {
+    width: 50px;
+    height: 40px;
+    margin: auto;
+    background: no-repeat center;
+}
+
+.forecast .rainy {
+    background-image: url("../img/rain.png");
+}
+
+.forecast .cloudy {
+    background-image: url("../img/cloudy.png");
+}
+
+.forecast .sunny {
+    background-image: url("../img/sunny.png");
+}
+
+.forecast .overcast {
+    background-image: url("../img/overcast.png");
+}
+
+.forecast .btn {
+    width: 15px;
+    height: 25px;
+    padding: 0;
+    margin: 40px 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.forecast .btn:focus,
+.forecast .btn:hover {
+    opacity: 0.1;
+}
+
+.forecast .back {
+    margin-left: 50px;
+    background: url("../img/back.png") no-repeat center;
+}
+
+.forecast .next {
+    margin-right: 50px;
+    background: url("../img/next.png") no-repeat center;
+}

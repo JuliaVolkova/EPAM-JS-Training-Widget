@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--<meta name="viewport" content="width=device-width">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Widget</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/float-layout.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,54 +15,45 @@
 
     <img src="img/paris.jpeg" alt="Paris" width="695" height="440">
 
-    <div class="wrapper clearfix">
+    <div class="wrapper clearfix"></div>
 
+    <div class="wrapper-forecast">
+        <section class="forecast">
+            <h2 class="visually-hidden">Days of the week</h2>
+            <button type="button" class="btn back hide-text">Back</button>
+            <ol></ol>
+            <button type="button" class="btn next hide-text">Next</button>
+        </section>
+    </div>
+
+    <template id="template-date">
         <div class="date">
             <p>Friday</p>
             <time datetime="2017-08-23">August, 23rd</time>
         </div>
+    </template>
 
+
+    <template id="template-info">
         <div class="info">
             <p class="degrees">12°</p>
-            <p class="location">Paris, France</p>
+            <label for="location" class="visually-hidden">location</label>
+            <input class="location" readonly id="location">Paris, France>
             <p class="wind">14 <span class="strength">mph</span></p>
         </div>
+    </template>
 
-    </div>
-
-    <div class="wrapper-forecast">
-
-        <section class="forecast">
-            <h2 class="visually-hidden">Days of the week</h2>
-            <button type="button" class="btn back hide-text">Back</button>
-            <ol>
-                <li>
-                    <span class="day"><time datetime="2017-08-19">Monday</time></span>
-                    <span class="weather rainy hide-text">rainy</span>
-                    <span class="degrees">10°</span>
-                </li>
-                <li>
-                    <span class="day"><time datetime="2017-08-20">Tuesday</time></span>
-                    <span class="weather cloudy hide-text">cloudy</span>
-                    <span class="degrees">15°</span>
-                </li>
-                <li>
-                    <span class="day"><time datetime="2017-08-21">Wednesday</time></span>
-                    <span class="weather sunny hide-text">sunny</span>
-                    <span class="degrees">23°</span>
-                </li>
-                <li>
-                    <span class="day"><time datetime="2017-08-22">Thursday</time></span>
-                    <span class="weather overcast hide-text">overcast</span>
-                    <span class="degrees">18°</span>
-                </li>
-            </ol>
-            <button type="button" class="btn next hide-text">Next</button>
-        </section>
-
-    </div>
+    <template id="template-day">
+        <li>
+            <span class="day"><time datetime="2017-08-19">Monday</time></span>
+            <span class="weather rainy hide-text">rainy</span>
+            <span class="degrees">10°</span>
+        </li>
+    </template>
 
 </div>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

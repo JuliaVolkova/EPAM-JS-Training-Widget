@@ -26,20 +26,36 @@
         </section>
     </div>
 
+    <div class="error hidden">
+        <p class="error-message">Sorry! Something goes wrong! Try again later, please :)</p>
+    </div>
+
     <template id="template-date">
         <div class="date">
-            <p>Friday</p>
-            <time datetime="2017-08-23">August, 23rd</time>
+            <p></p>
+            <time datetime=""></time>
         </div>
     </template>
 
-
     <template id="template-info">
         <div class="info">
-            <p class="degrees">12°</p>
-            <label for="location" class="visually-hidden">location</label>
-            <input class="location" readonly id="location">Paris, France>
-            <p class="wind">14 <span class="strength">mph</span></p>
+            <p class="degrees"></p>
+            <div class="city-wrapper">
+                <button type="button" class="search hide-text">search</button>
+                <label for="location" class="visually-hidden">location</label>
+                <input class="location hidden" id="location" list="cities" autofocus>
+                <datalist id="cities">
+                    <option value="London">
+                    <option value="Rio de Janeiro">
+                    <option value="Paris">
+                    <option value="Amsterdam">
+                    <option value="Saint-Petersburg">
+                    <option value="Oakland">
+                    <option value="Tokyo">
+                </datalist>
+                <p class="city"></p>
+            </div>
+            <p class="wind"><span class="strength">mph</span></p>
         </div>
     </template>
 
@@ -53,6 +69,7 @@
 
 </div>
 
+<script src="js/backend.js"></script>
 <script src="js/script.js"></script>
 
 </body>

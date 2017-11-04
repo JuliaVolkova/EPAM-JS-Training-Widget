@@ -28,6 +28,10 @@ body {
     clip: rect(0 0 0 0);
 }
 
+.hidden {
+    display: none;
+}
+
 .widget {
     position: relative;
     width: 695px;
@@ -64,13 +68,13 @@ body {
 .date time {
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .info {
     width: auto;
     padding: 5px;
-    margin-right: 65px;
+    margin-right: 20px;
     margin-top: 55px;
     line-height: 1.1;
 }
@@ -88,8 +92,18 @@ body {
     line-height: 1;
 }
 
+.city-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.city {
+    margin: 5px 20px;
+    font-size: 32px;
+}
+
 .info .wind {
-    margin: 10px 40px;
+    margin: 5px 40px;
     padding: 5px;
     font-size: 28px;
     font-weight: bold;
@@ -98,6 +112,28 @@ body {
 .wind .strength {
     font-size: 12px;
     font-weight: bold;
+}
+
+.city-wrapper .location {
+    margin: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    height: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Lato, Helvesans, sans-serif;
+    color: #000;
+}
+
+.wrapper .search {
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    background-image: url("../img/search-icon.png");
 }
 
 .wrapper-forecast {
@@ -132,7 +168,7 @@ body {
 .forecast li {
     display: flex;
     flex-direction: column;
-    width: 105px;
+    width: 100px;
     padding: 10px;
     font-size: 14px;
     text-align: center;
@@ -193,5 +229,23 @@ body {
     background: url("../img/next.png") no-repeat center;
 }
 
+.error {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border: 5px solid #75b1c7;
+    font-size: 22px;
+    color: black;
+    text-align: center;
+}
 
+.error .error-message {
+    padding: 30px;
+}
 

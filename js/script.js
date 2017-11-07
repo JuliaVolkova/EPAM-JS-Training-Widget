@@ -11,7 +11,7 @@ window.widget = (function () {
             new City('Dublin', 'ie', 'img/dublin.jpg'),
             new City('Irkutsk', 'ru', 'img/irkutsk.jpg'),
             new City('London', 'gb', 'img/london.jpg'),
-            new City('New-york', 'us', 'img/new-york.jpg'),
+            new City('New York', 'us', 'img/new-york.jpg'),
             new City('Reykjavik', 'is', 'img/reykjavik.jpg'),
             new City('Rio de Janeiro', 'br', 'img/rio.jpg'),
             new City('Saint-Petersburg', 'ru', 'img/st-petersburg.jpg'),
@@ -44,7 +44,7 @@ window.widget = (function () {
                 var date = new Date(dayForecast[0].dt_txt);
                 var temperature = (dayForecast[0].main.temp - CELSIUS_TO_KELVIN).toFixed();
                 var wind = dayForecast[0].wind.speed;
-                var type = dayForecast[0].weather.main;
+                var type = dayForecast[0].weather[0].main.toLowerCase();
                 return new Weather(date, temperature, wind, type);
             });
 
@@ -74,13 +74,13 @@ window.widget = (function () {
             input.addEventListener('blur', closeCityInput);
             input.addEventListener('keydown', closeCityInputByKeyboard);
 
-            // var hideCityName = function () {
-            //     document.querySelector('.city').classList.add('hidden');
-            // };
+            var hideCityName = function () {
+                document.querySelector('.city').classList.add('hidden');
+            };
 
             input.addEventListener('change', function() {
                 getForecastForCity(input.value) });
-            // searchButton.addEventListener('click', hideCityName);
+            searchButton.addEventListener('click', hideCityName);
         }
 
         /**
@@ -97,6 +97,7 @@ window.widget = (function () {
         }
 
         function showErrorMessage() {
+
             document.querySelector('.error').classList.remove('hidden');
         }
 

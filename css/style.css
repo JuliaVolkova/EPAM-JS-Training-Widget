@@ -36,6 +36,7 @@ body {
     position: relative;
     width: 695px;
     height: 440px;
+    text-shadow: 3px 3px 3px black;
 }
 
 .widget img {
@@ -98,7 +99,7 @@ body {
 }
 
 .city {
-    margin: 5px 20px;
+    margin: 5px 10px 15px 10px;
     font-size: 32px;
 }
 
@@ -129,11 +130,16 @@ body {
 
 .wrapper .search {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     padding: 0;
     margin: 0;
-    background-image: url("../img/search-icon.png");
+    background-image: url("../img/new-search-icon.png");
+    background-color: transparent;
+    background-position: center center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    border: 0;
 }
 
 .wrapper-forecast {

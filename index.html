@@ -10,67 +10,66 @@
 
 <body>
 
-<div class="widget clearfix">
-    <h1 class="visually-hidden">Weather in Paris</h1>
+<template id="template">
+    <div class="widget clearfix">
+        <h1 class="visually-hidden">Weather in Paris</h1>
 
-    <img src="img/paris.jpeg" alt="Paris" width="695" height="440">
+        <img src="" alt="" width="695" height="440">
 
-    <div class="wrapper clearfix"></div>
+        <div class="wrapper clearfix">
 
-    <div class="wrapper-forecast">
-        <section class="forecast">
-            <h2 class="visually-hidden">Days of the week</h2>
-            <button type="button" class="btn back hide-text">Back</button>
-            <ol></ol>
-            <button type="button" class="btn next hide-text">Next</button>
-        </section>
-    </div>
-
-    <div class="error hidden">
-        <p class="error-message">Sorry! Something goes wrong! Try again later, please :)</p>
-    </div>
-
-    <template id="template-date">
-        <div class="date">
-            <p></p>
-            <time datetime=""></time>
-        </div>
-    </template>
-
-    <template id="template-info">
-        <div class="info">
-            <p class="degrees"></p>
-            <div class="city-wrapper">
-                <button type="button" class="search hide-text">search</button>
-                <label for="location" class="visually-hidden">location</label>
-                <input class="location hidden" id="location" list="cities" autofocus>
-                <datalist id="cities">
-                    <option value="London">
-                    <option value="Rio de Janeiro">
-                    <option value="Paris">
-                    <option value="Amsterdam">
-                    <option value="Saint-Petersburg">
-                    <option value="Oakland">
-                    <option value="Tokyo">
-                    <option value="Dublin">
-                    <option value="Reykjavik">
-                    <option value="Irkutsk">
-                </datalist>
-                <p class="city"></p>
+            <div class="date">
+                <p></p>
+                <time datetime=""></time>
             </div>
-            <p class="wind"><span class="strength">mph</span></p>
+
+            <div class="info">
+                <p class="degrees"></p>
+                <div class="city-wrapper">
+                    <button type="button" class="search hide-text">search</button>
+                    <label for="location" class="visually-hidden">location</label>
+                    <input class="location hidden" id="location" list="cities" autofocus>
+                    <datalist id="cities">
+                        <option value="London">
+                        <option value="Rio de Janeiro">
+                        <option value="Paris">
+                        <option value="Amsterdam">
+                        <option value="Saint-Petersburg">
+                        <option value="Auckland">
+                        <option value="Tokyo">
+                        <option value="Dublin">
+                        <option value="Reykjavik">
+                        <option value="Irkutsk">
+                    </datalist>
+                    <p class="city"></p>
+                </div>
+                <p class="wind"><span class="strength">mph</span></p>
+            </div>
+
         </div>
-    </template>
 
-    <template id="template-day">
-        <li>
-            <span class="day"><time datetime="2017-08-19">Monday</time></span>
-            <span class="weather rainy hide-text">rainy</span>
-            <span class="degrees">10°</span>
-        </li>
-    </template>
+        <div class="wrapper-forecast">
+            <section class="forecast">
+                <h2 class="visually-hidden">Days of the week</h2>
+                <button type="button" class="btn back hide-text">Back</button>
+                <ol>
+                    <li>
+                        <span class="day"><time datetime="2017-08-19">Monday</time></span>
+                        <span class="weather rainy hide-text">rainy</span>
+                        <span class="degrees">10°</span>
+                    </li>
+                </ol>
+                <button type="button" class="btn next hide-text">Next</button>
+            </section>
+        </div>
 
-</div>
+        <div class="error hidden">
+            <p class="error-message">Sorry! Something goes wrong! Try again later, please :)</p>
+        </div>
+
+    </div>
+</template>
+
 
 <script src="js/backend.js"></script>
 <script src="js/script.js"></script>

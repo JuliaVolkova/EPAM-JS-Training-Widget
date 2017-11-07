@@ -28,19 +28,20 @@
                 <div class="city-wrapper">
                     <button type="button" class="search hide-text">search</button>
                     <label for="location" class="visually-hidden">location</label>
-                    <input class="location hidden" id="location" list="cities" autofocus>
-                    <datalist id="cities">
-                        <option value="London">
-                        <option value="Rio de Janeiro">
-                        <option value="Paris">
-                        <option value="Amsterdam">
-                        <option value="Saint-Petersburg">
-                        <option value="Auckland">
-                        <option value="Tokyo">
-                        <option value="Dublin">
-                        <option value="Reykjavik">
-                        <option value="Irkutsk">
-                    </datalist>
+                    <select class="location hidden" id="location" autofocus required>
+                        <option value="" selected disabled>Choose city</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="London">London</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Amsterdam">Amsterdam</option>
+                        <option value="Saint-Petersburg">Saint-Petersburg</option>
+                        <option value="Auckland">Auckland</option>
+                        <option value="Tokyo">Tokyo</option>
+                        <option value="Dublin">Dublin</option>
+                        <option value="Reykjavik">Reykjavik</option>
+                        <option value="Irkutsk">Irkutsk</option>
+                        <option value="New York">New York</option>
+                    </select>
                     <p class="city"></p>
                 </div>
                 <p class="wind"><span class="strength">mph</span></p>
@@ -54,20 +55,20 @@
                 <button type="button" class="btn back hide-text">Back</button>
                 <ol>
                     <li>
-                        <span class="day"><time datetime="2017-08-19">Monday</time></span>
-                        <span class="weather rainy hide-text">rainy</span>
-                        <span class="degrees">10°</span>
+                        <span class="day"><time datetime="2017-08-19"></time></span>
+                        <span class="weather rainy hide-text"></span>
+                        <span class="degrees"></span>
                     </li>
                 </ol>
                 <button type="button" class="btn next hide-text">Next</button>
             </section>
         </div>
 
-        <div class="error hidden">
-            <p class="error-message">Sorry! Something goes wrong! Try again later, please :)</p>
-        </div>
-
     </div>
+</template>
+
+<template id="error">
+    <p></p>
 </template>
 
 

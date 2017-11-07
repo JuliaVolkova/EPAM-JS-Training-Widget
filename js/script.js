@@ -14,7 +14,7 @@ window.widget = (function () {
             new City('New-york', 'us', 'img/new-york.jpg'),
             new City('Reykjavik', 'is', 'img/reykjavik.jpg'),
             new City('Rio de Janeiro', 'br', 'img/rio.jpg'),
-            new City('Saint-Petersburg', 'ru', 'img/reykjavik.jpg'),
+            new City('Saint-Petersburg', 'ru', 'img/st-petersburg.jpg'),
             new City('Tokyo', 'jp', 'img/tokyo.jpg')
         ];
         var widget;
@@ -124,13 +124,14 @@ window.widget = (function () {
                 });
                 element.querySelector('.degrees').textContent = currentWeather.temperature + '°';
                 element.querySelector('.wind').textContent = currentWeather.wind + 'mph';
-                element.querySelector('.city').textContent = currentWeather.name;
+                element.querySelector('.city').textContent = currentCity.name;
                 var list = element.querySelector('ol');
                 var fragment = document.createDocumentFragment();
                 this.weathers.forEach(function (day) {
                     var listElement = list.querySelector('li').cloneNode(true);
                     listElement.querySelector('.day').textContent = day.date.toLocaleDateString('en-GB', {weekday: 'long'});
-                    listElement.querySelector('.weather').textContent = day.wind;
+                    console.log(day.type);
+                    listElement.querySelector('.weather').textContent = day.type;
                     listElement.querySelector('.degrees').textContent = day.temperature + '℃';
                     fragment.appendChild(listElement);
                 });
@@ -140,7 +141,7 @@ window.widget = (function () {
             };
 
             Widget.prototype.destroy = function() {
-                console.log('Delete widget');
+                document.body.removeChild(document.querySelector('.widget'));
             }
         }
 

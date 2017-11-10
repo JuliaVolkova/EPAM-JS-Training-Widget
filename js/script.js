@@ -70,17 +70,17 @@ window.widget = (function () {
                 }
             };
 
-            searchButton.addEventListener('click', getCity);
-            input.addEventListener('blur', closeCityInput);
-            input.addEventListener('keydown', closeCityInputByKeyboard);
-
             var hideCityName = function () {
                 document.querySelector('.city').classList.add('hidden');
             };
 
+            searchButton.addEventListener('click', getCity);
+            searchButton.addEventListener('click', hideCityName);
+            input.addEventListener('blur', closeCityInput);
+            input.addEventListener('keydown', closeCityInputByKeyboard);
             input.addEventListener('change', function() {
                 getForecastForCity(input.value) });
-            searchButton.addEventListener('click', hideCityName);
+
         }
 
         /**
@@ -96,9 +96,28 @@ window.widget = (function () {
             return newArray;
         }
 
-        function showErrorMessage() {
+        function showErrorMessage(status) {
+            var errorMessageTemplate = document.querySelector('#error').content.cloneNode(true);
+            var message;
+            switch (status) {
+                case 404:
+                    message = 'Error 404. Unauthorized';
+                    break;
 
-            document.querySelector('.error').classList.remove('hidden');
+                case 401:
+                    message = 'Error 401. Not found';
+                    break;
+
+                case 500:
+                    message = 'Error 500. Sorry, something went wrong. Try it later please :)';
+                    break;
+
+                default:
+                    message = 'Sorry, something went wrong. Try it later please :)';
+            }
+            errorMessageTemplate.querySelector('p').textContent = message;
+            document.body.appendChild(errorMessageTemplate)
+            document.querySelector('#error').classList.remove('hidden');
         }
 
         /**

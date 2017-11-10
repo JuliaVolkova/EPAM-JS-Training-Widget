@@ -16,7 +16,7 @@ window.backend = (function () {
                     var data = JSON.parse(xhr.responseText);
                     success(data);
                 } else {
-                    error();
+                    error(status);
                 }
             });
 
